@@ -21,8 +21,8 @@
     "secondDescription": {
       "type": "text"
     },
-    "videoUrl": {
-      "type": "string"
+    "frameVideo": {
+      "type": "text"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-network",
     "pluralName": "social-networks",
-    "displayName": "SocialNetwork "
+    "displayName": "SocialNetwork ",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,6 +29,9 @@
       "relation": "manyToOne",
       "target": "api::footer.footer",
       "inversedBy": "social_networks"
+    },
+    "icon": {
+      "type": "string"
     }
   }
 }
