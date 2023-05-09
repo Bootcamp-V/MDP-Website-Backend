@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namePage": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image_banners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image-banner.image-banner",
+      "mappedBy": "banner"
+    }
+  }
+}
