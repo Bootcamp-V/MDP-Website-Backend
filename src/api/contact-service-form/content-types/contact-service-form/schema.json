@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_service_forms",
+  "info": {
+    "singularName": "contact-service-form",
+    "pluralName": "contact-service-forms",
+    "displayName": "ContactServiceForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "biginteger"
+    },
+    "mensaje": {
+      "type": "text"
+    }
+  }
+}
