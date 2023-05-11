@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "list_info_contact_services",
+  "info": {
+    "singularName": "list-info-contact-service",
+    "pluralName": "list-info-contact-services",
+    "displayName": "ListInfoContactService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    },
+    "info_contact_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::info-contact-service.info-contact-service",
+      "inversedBy": "list_info_contact_services"
+    }
+  }
+}
