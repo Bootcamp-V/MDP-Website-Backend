@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-12T02:06:42.479Z"
+    "x-generation-date": "2023-05-12T04:56:40.158Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -593,7 +593,7 @@
                                               "attributes": {
                                                 "type": "object",
                                                 "properties": {
-                                                  "image": {
+                                                  "imagen": {
                                                     "type": "object",
                                                     "properties": {
                                                       "data": {
@@ -4397,7 +4397,7 @@
                                 "attributes": {
                                   "type": "object",
                                   "properties": {
-                                    "image": {
+                                    "imagen": {
                                       "type": "object",
                                       "properties": {
                                         "data": {
@@ -7734,7 +7734,7 @@
           "data": {
             "type": "object",
             "properties": {
-              "image": {
+              "imagen": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -7809,7 +7809,7 @@
       "ImageAboutPage": {
         "type": "object",
         "properties": {
-          "image": {
+          "imagen": {
             "type": "object",
             "properties": {
               "data": {
@@ -8633,7 +8633,7 @@
                                 "attributes": {
                                   "type": "object",
                                   "properties": {
-                                    "image": {
+                                    "imagen": {
                                       "type": "object",
                                       "properties": {
                                         "data": {
@@ -14482,7 +14482,7 @@
                                 "attributes": {
                                   "type": "object",
                                   "properties": {
-                                    "image": {
+                                    "imagen": {
                                       "type": "object",
                                       "properties": {
                                         "data": {
