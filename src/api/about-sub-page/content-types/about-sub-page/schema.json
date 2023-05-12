@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_sub_pages",
+  "info": {
+    "singularName": "about-sub-page",
+    "pluralName": "about-sub-pages",
+    "displayName": "AboutSubPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tittle_about_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tittle-about-page.tittle-about-page",
+      "mappedBy": "about_sub_page"
+    },
+    "description_about_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::description-about-page.description-about-page",
+      "mappedBy": "about_sub_page"
+    },
+    "image_about_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image-about-page.image-about-page",
+      "mappedBy": "about_sub_page"
+    }
+  }
+}

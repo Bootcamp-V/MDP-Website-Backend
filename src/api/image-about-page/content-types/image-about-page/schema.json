@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_about_pages",
+  "info": {
+    "singularName": "image-about-page",
+    "pluralName": "image-about-pages",
+    "displayName": "ImageAboutPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "about_sub_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::about-sub-page.about-sub-page",
+      "inversedBy": "image_about_pages"
+    }
+  }
+}
