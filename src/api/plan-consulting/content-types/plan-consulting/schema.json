@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_consultings",
+  "info": {
+    "singularName": "plan-consulting",
+    "pluralName": "plan-consultings",
+    "displayName": "PlanConsulting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "plan_child_consultings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plan-child-consulting.plan-child-consulting",
+      "mappedBy": "plan_consulting"
+    }
+  }
+}

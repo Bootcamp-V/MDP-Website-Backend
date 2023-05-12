@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps_child_services",
+  "info": {
+    "singularName": "steps-child-service",
+    "pluralName": "steps-child-services",
+    "displayName": "StepsChildService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "steps_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::steps-service.steps-service",
+      "inversedBy": "steps_child_services"
+    }
+  }
+}

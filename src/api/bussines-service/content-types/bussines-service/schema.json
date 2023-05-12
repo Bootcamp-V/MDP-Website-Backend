@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bussines_services",
+  "info": {
+    "singularName": "bussines-service",
+    "pluralName": "bussines-services",
+    "displayName": "BussinesService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "bussines_child_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bussines-child-service.bussines-child-service",
+      "mappedBy": "bussines_service"
+    }
+  }
+}
