@@ -19,6 +19,12 @@
       "relation": "manyToOne",
       "target": "api::about-sub-page.about-sub-page",
       "inversedBy": "tittle_about_pages"
+    },
+    "description_about_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::description-about-page.description-about-page",
+      "mappedBy": "tittle_about_page"
     }
   }
 }

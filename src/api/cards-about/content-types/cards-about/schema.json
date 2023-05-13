@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards_abouts",
+  "info": {
+    "singularName": "cards-about",
+    "pluralName": "cards-abouts",
+    "displayName": "CardsAbout"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tittle_cards_about": {
+      "type": "string"
+    },
+    "description_cards_about": {
+      "type": "text"
+    }
+  }
+}
