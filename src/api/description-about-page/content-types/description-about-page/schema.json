@@ -4,7 +4,8 @@
   "info": {
     "singularName": "description-about-page",
     "pluralName": "description-about-pages",
-    "displayName": "DescriptionAboutPage"
+    "displayName": "DescriptionAboutPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::about-sub-page.about-sub-page",
+      "inversedBy": "description_about_pages"
+    },
+    "tittle_about_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tittle-about-page.tittle-about-page",
       "inversedBy": "description_about_pages"
     }
   }
