@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "container_abouts",
+  "info": {
+    "singularName": "container-about",
+    "pluralName": "container-abouts",
+    "displayName": "ContainerAbout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
