@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "values_visions",
+  "info": {
+    "singularName": "values-vision",
+    "pluralName": "values-visions",
+    "displayName": "ValuesVision"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
