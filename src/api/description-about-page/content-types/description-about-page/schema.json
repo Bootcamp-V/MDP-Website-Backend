@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "description_about_pages",
+  "info": {
+    "singularName": "description-about-page",
+    "pluralName": "description-about-pages",
+    "displayName": "DescriptionAboutPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "title_about_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::title-about-page.title-about-page",
+      "inversedBy": "description_about_pages"
+    },
+    "about_sub_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::about-sub-page.about-sub-page",
+      "inversedBy": "description_about_pages"
+    }
+  }
+}
