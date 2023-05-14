@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_homes",
+  "info": {
+    "singularName": "content-home",
+    "pluralName": "content-homes",
+    "displayName": "ContentHome",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "first_description": {
+      "type": "text"
+    },
+    "second_description": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "locate": {
+      "type": "string"
+    }
+  }
+}

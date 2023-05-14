@@ -1,5 +1,5 @@
 {
-  "/image-banners": {
+  "/content-homes": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ImageBannerListResponse"
+                "$ref": "#/components/schemas/ContentHomeListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Image-banner"
+        "Content-home"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/image-banners"
+      "operationId": "get/content-homes"
     },
     "post": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ImageBannerResponse"
+                "$ref": "#/components/schemas/ContentHomeResponse"
               }
             }
           }
@@ -235,23 +235,23 @@
         }
       },
       "tags": [
-        "Image-banner"
+        "Content-home"
       ],
       "parameters": [],
-      "operationId": "post/image-banners",
+      "operationId": "post/content-homes",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ImageBannerRequest"
+              "$ref": "#/components/schemas/ContentHomeRequest"
             }
           }
         }
       }
     }
   },
-  "/image-banners/{id}": {
+  "/content-homes/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -259,7 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ImageBannerResponse"
+                "$ref": "#/components/schemas/ContentHomeResponse"
               }
             }
           }
@@ -316,7 +316,7 @@
         }
       },
       "tags": [
-        "Image-banner"
+        "Content-home"
       ],
       "parameters": [
         {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/image-banners/{id}"
+      "operationId": "get/content-homes/{id}"
     },
     "put": {
       "responses": {
@@ -339,7 +339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ImageBannerResponse"
+                "$ref": "#/components/schemas/ContentHomeResponse"
               }
             }
           }
@@ -396,7 +396,7 @@
         }
       },
       "tags": [
-        "Image-banner"
+        "Content-home"
       ],
       "parameters": [
         {
@@ -410,13 +410,13 @@
           }
         }
       ],
-      "operationId": "put/image-banners/{id}",
+      "operationId": "put/content-homes/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ImageBannerRequest"
+              "$ref": "#/components/schemas/ContentHomeRequest"
             }
           }
         }
@@ -487,7 +487,7 @@
         }
       },
       "tags": [
-        "Image-banner"
+        "Content-home"
       ],
       "parameters": [
         {
@@ -501,7 +501,7 @@
           }
         }
       ],
-      "operationId": "delete/image-banners/{id}"
+      "operationId": "delete/content-homes/{id}"
     }
   }
 }
