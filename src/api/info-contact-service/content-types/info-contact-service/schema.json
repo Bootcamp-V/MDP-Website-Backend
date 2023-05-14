@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info_contact_services",
+  "info": {
+    "singularName": "info-contact-service",
+    "pluralName": "info-contact-services",
+    "displayName": "InfoContactService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "list_info_contact_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::list-info-contact-service.list-info-contact-service",
+      "mappedBy": "info_contact_service"
+    }
+  }
+}

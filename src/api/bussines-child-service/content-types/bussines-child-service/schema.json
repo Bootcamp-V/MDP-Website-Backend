@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bussines_child_services",
+  "info": {
+    "singularName": "bussines-child-service",
+    "pluralName": "bussines-child-services",
+    "displayName": "BussinesChildService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "bussines_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bussines-service.bussines-service",
+      "inversedBy": "bussines_child_services"
+    }
+  }
+}

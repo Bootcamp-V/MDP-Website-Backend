@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_child_consultings",
+  "info": {
+    "singularName": "plan-child-consulting",
+    "pluralName": "plan-child-consultings",
+    "displayName": "PlanChildConsulting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tiempo": {
+      "type": "string"
+    },
+    "plan_consulting": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::plan-consulting.plan-consulting",
+      "inversedBy": "plan_child_consultings"
+    },
+    "paso": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_offer_services",
+  "info": {
+    "singularName": "report-offer-service",
+    "pluralName": "report-offer-services",
+    "displayName": "ReportOfferService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "we_offer_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::we-offer-service.we-offer-service",
+      "inversedBy": "report_offer_services"
+    }
+  }
+}

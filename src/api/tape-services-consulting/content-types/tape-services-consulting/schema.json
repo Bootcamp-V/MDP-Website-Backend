@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tape_services_consultings",
+  "info": {
+    "singularName": "tape-services-consulting",
+    "pluralName": "tape-services-consultings",
+    "displayName": "TapeServicesConsulting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "textButton": {
+      "type": "string"
+    }
+  }
+}

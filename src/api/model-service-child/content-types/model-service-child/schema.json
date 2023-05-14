@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "model_service_children",
+  "info": {
+    "singularName": "model-service-child",
+    "pluralName": "model-service-children",
+    "displayName": "ModelServiceChild",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "model_service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::model-service.model-service",
+      "inversedBy": "model_service_children"
+    },
+    "urlImage": {
+      "type": "string"
+    }
+  }
+}

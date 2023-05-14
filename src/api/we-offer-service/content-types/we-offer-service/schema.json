@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "we_offer_services",
+  "info": {
+    "singularName": "we-offer-service",
+    "pluralName": "we-offer-services",
+    "displayName": "WeOfferService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "list_offer_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::list-offer-service.list-offer-service",
+      "mappedBy": "we_offer_service"
+    },
+    "report_offer_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::report-offer-service.report-offer-service",
+      "mappedBy": "we_offer_service"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
