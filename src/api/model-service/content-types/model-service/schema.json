@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "model_services",
+  "info": {
+    "singularName": "model-service",
+    "pluralName": "model-services",
+    "displayName": "ModelService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "model_service_children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model-service-child.model-service-child",
+      "mappedBy": "model_service"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agile_path_consultings",
+  "info": {
+    "singularName": "agile-path-consulting",
+    "pluralName": "agile-path-consultings",
+    "displayName": "AgilePathConsulting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "urlImage": {
+      "type": "string"
+    },
+    "agile_path_child_consultings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agile-path-child-consulting.agile-path-child-consulting",
+      "mappedBy": "agile_path_consulting"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_service_consulting_forms",
+  "info": {
+    "singularName": "contact-service-consulting-form",
+    "pluralName": "contact-service-consulting-forms",
+    "displayName": "ContactServiceConsultingForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "biginteger"
+    },
+    "empresa": {
+      "type": "string"
+    },
+    "mensaje": {
+      "type": "text"
+    }
+  }
+}

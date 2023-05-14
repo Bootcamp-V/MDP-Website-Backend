@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agile_child_descrip_transf_consultings",
+  "info": {
+    "singularName": "agile-child-descrip-transf-consulting",
+    "pluralName": "agile-child-descrip-transf-consultings",
+    "displayName": "AgileChildDescripTransfConsulting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "agil_transformation_consulting": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agil-transformation-consulting.agil-transformation-consulting",
+      "inversedBy": "agile_child_descrip_transf_consultings"
+    }
+  }
+}
