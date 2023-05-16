@@ -15,7 +15,7 @@
     "description": {
       "type": "text"
     },
-    "type": {
+    "url": {
       "type": "string"
     },
     "title_rights_arco": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-15T16:05:19.263Z"
+    "x-generation-date": "2023-05-15T23:56:30.156Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11720,7 +11720,7 @@
               "description": {
                 "type": "string"
               },
-              "type": {
+              "url": {
                 "type": "string"
               },
               "title_rights_arco": {
@@ -11801,7 +11801,7 @@
           "description": {
             "type": "string"
           },
-          "type": {
+          "url": {
             "type": "string"
           },
           "title_rights_arco": {
@@ -11836,7 +11836,7 @@
                                     "description": {
                                       "type": "string"
                                     },
-                                    "type": {
+                                    "url": {
                                       "type": "string"
                                     },
                                     "title_rights_arco": {
@@ -12283,6 +12283,9 @@
                             }
                           }
                         }
+                      },
+                      "type": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -21954,7 +21957,7 @@
                                       "description": {
                                         "type": "string"
                                       },
-                                      "type": {
+                                      "url": {
                                         "type": "string"
                                       },
                                       "title_rights_arco": {
@@ -22401,6 +22404,9 @@
                               }
                             }
                           }
+                        },
+                        "type": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -29203,6 +29209,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "type": {
+                "type": "string"
               }
             }
           }
@@ -29277,7 +29286,7 @@
                         "description": {
                           "type": "string"
                         },
-                        "type": {
+                        "url": {
                           "type": "string"
                         },
                         "title_rights_arco": {
@@ -29673,6 +29682,9 @@
                                         }
                                       }
                                     },
+                                    "type": {
+                                      "type": "string"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -29811,6 +29823,9 @@
                 }
               }
             }
+          },
+          "type": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",

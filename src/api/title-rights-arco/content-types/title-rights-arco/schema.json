@@ -26,6 +26,9 @@
       "relation": "manyToOne",
       "target": "api::section-rights-arco.section-rights-arco",
       "inversedBy": "title_rights_arcos"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
