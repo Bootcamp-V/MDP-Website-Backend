@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "ContactUs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description_contact_uses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::description-contact-us.description-contact-us",
+      "mappedBy": "contact_us"
+    },
+    "contact_informations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contact-information.contact-information",
+      "mappedBy": "contact_us"
+    },
+    "social_networks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social-network.social-network",
+      "mappedBy": "contact_us"
+    },
+    "claims_books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::claims-book.claims-book",
+      "mappedBy": "contact_us"
+    }
+  }
+}

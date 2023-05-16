@@ -32,6 +32,12 @@
     },
     "icon": {
       "type": "string"
+    },
+    "contact_us": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contact-us.contact-us",
+      "inversedBy": "social_networks"
     }
   }
 }

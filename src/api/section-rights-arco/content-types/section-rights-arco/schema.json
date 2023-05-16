@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section_rights_arcos",
+  "info": {
+    "singularName": "section-rights-arco",
+    "pluralName": "section-rights-arcos",
+    "displayName": "SectionRightsArco"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "title_rights_arcos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::title-rights-arco.title-rights-arco",
+      "mappedBy": "section_rights_arco"
+    },
+    "description_rights_arcos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::description-rights-arco.description-rights-arco",
+      "mappedBy": "section_rights_arco"
+    }
+  }
+}
