@@ -23,12 +23,6 @@
       "relation": "manyToOne",
       "target": "api::title-rights-arco.title-rights-arco",
       "inversedBy": "description_rights_arcos"
-    },
-    "section_rights_arco": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::section-rights-arco.section-rights-arco",
-      "inversedBy": "description_rights_arcos"
     }
   }
 }
