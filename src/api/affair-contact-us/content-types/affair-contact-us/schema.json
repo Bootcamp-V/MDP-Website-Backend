@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "affair_contact_uses",
+  "info": {
+    "singularName": "affair-contact-us",
+    "pluralName": "affair-contact-uses",
+    "displayName": "AffairContactUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "contact_us": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contact-us.contact-us",
+      "inversedBy": "affair_contact_uses"
+    }
+  }
+}

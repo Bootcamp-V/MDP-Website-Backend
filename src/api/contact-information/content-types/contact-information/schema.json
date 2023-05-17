@@ -28,6 +28,12 @@
       "relation": "manyToOne",
       "target": "api::contact-us.contact-us",
       "inversedBy": "contact_informations"
+    },
+    "footer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::footer.footer",
+      "inversedBy": "contact_informations"
     }
   }
 }

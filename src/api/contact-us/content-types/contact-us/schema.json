@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::claims-book.claims-book",
       "mappedBy": "contact_us"
+    },
+    "affair_contact_uses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::affair-contact-us.affair-contact-us",
+      "mappedBy": "contact_us"
     }
   }
 }

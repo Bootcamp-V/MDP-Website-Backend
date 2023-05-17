@@ -15,15 +15,6 @@
     "logoUrl": {
       "type": "string"
     },
-    "direccion": {
-      "type": "string"
-    },
-    "telefono": {
-      "type": "string"
-    },
-    "email": {
-      "type": "email"
-    },
     "fechaCopyright": {
       "type": "string"
     },
@@ -31,6 +22,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::social-network.social-network",
+      "mappedBy": "footer"
+    },
+    "contact_informations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contact-information.contact-information",
       "mappedBy": "footer"
     }
   }
