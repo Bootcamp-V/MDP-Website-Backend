@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-17T04:18:49.685Z"
+    "x-generation-date": "2023-05-18T05:25:51.948Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9809,6 +9809,14 @@
               },
               "tipodoc": {
                 "type": "string"
+              },
+              "numerodocpersona": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
+              },
+              "tipodocpersona": {
+                "type": "string"
               }
             }
           }
@@ -9900,6 +9908,14 @@
             "type": "string"
           },
           "tipodoc": {
+            "type": "string"
+          },
+          "numerodocpersona": {
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
+          },
+          "tipodocpersona": {
             "type": "string"
           },
           "createdAt": {

@@ -44,6 +44,12 @@
     },
     "tipodoc": {
       "type": "string"
+    },
+    "numerodocpersona": {
+      "type": "biginteger"
+    },
+    "tipodocpersona": {
+      "type": "string"
     }
   }
 }
