@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-18T07:13:51.965Z"
+    "x-generation-date": "2023-05-18T22:31:08.878Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2479,6 +2479,9 @@
                             }
                           }
                         }
+                      },
+                      "policyFormUrl": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -9640,6 +9643,9 @@
                           }
                         }
                       },
+                      "policyFormUrl": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -12245,6 +12251,9 @@
                           }
                         }
                       },
+                      "policyFormUrl": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -13293,6 +13302,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "policyFormUrl": {
+                "type": "string"
               }
             }
           }
@@ -14416,6 +14428,9 @@
                                         }
                                       }
                                     },
+                                    "policyFormUrl": {
+                                      "type": "string"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -14600,6 +14615,9 @@
                 }
               }
             }
+          },
+          "policyFormUrl": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -19831,6 +19849,9 @@
                           }
                         }
                       },
+                      "policyFormUrl": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -21632,6 +21653,9 @@
                                                                   }
                                                                 }
                                                               },
+                                                              "policyFormUrl": {
+                                                                "type": "string"
+                                                              },
                                                               "createdAt": {
                                                                 "type": "string",
                                                                 "format": "date-time"
@@ -22994,6 +23018,9 @@
                                                                     }
                                                                   }
                                                                 }
+                                                              },
+                                                              "policyFormUrl": {
+                                                                "type": "string"
                                                               },
                                                               "createdAt": {
                                                                 "type": "string",
@@ -28309,6 +28336,9 @@
                                                                                 }
                                                                               }
                                                                             }
+                                                                          },
+                                                                          "policyFormUrl": {
+                                                                            "type": "string"
                                                                           },
                                                                           "createdAt": {
                                                                             "type": "string",
@@ -34084,6 +34114,9 @@
                                                                               }
                                                                             }
                                                                           },
+                                                                          "policyFormUrl": {
+                                                                            "type": "string"
+                                                                          },
                                                                           "createdAt": {
                                                                             "type": "string",
                                                                             "format": "date-time"
@@ -36614,6 +36647,9 @@
                                                                                             }
                                                                                           }
                                                                                         }
+                                                                                      },
+                                                                                      "policyFormUrl": {
+                                                                                        "type": "string"
                                                                                       },
                                                                                       "createdAt": {
                                                                                         "type": "string",

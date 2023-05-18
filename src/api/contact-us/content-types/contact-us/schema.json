@@ -44,6 +44,9 @@
       "relation": "oneToMany",
       "target": "api::affair-contact-us.affair-contact-us",
       "mappedBy": "contact_us"
+    },
+    "policyFormUrl": {
+      "type": "string"
     }
   }
 }
