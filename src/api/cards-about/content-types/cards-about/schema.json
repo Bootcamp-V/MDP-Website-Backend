@@ -17,6 +17,9 @@
     },
     "description_cards_about": {
       "type": "text"
+    },
+    "path": {
+      "type": "string"
     }
   }
 }
