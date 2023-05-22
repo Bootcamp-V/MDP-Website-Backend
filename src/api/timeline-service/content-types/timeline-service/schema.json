@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timeline_services",
+  "info": {
+    "singularName": "timeline-service",
+    "pluralName": "timeline-services",
+    "displayName": "TimelineService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
