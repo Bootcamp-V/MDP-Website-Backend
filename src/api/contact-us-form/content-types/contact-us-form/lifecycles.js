@@ -4,8 +4,8 @@ module.exports = {
 
       try{
           await strapi.plugins['email'].services.email.send({
-            to: 'pruebamdpemails@gmail.com',
-            from: 'pruebamdpemails@gmail.com',
+            to: 'clouddesk@mdp.com.pe',
+            from: 'clouddesk@mdp.com.pe',
             subject: 'New Message ContactUs',
             text: "Contáctanos",
             html:
