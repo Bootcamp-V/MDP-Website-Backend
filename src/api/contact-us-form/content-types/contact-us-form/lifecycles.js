@@ -1,11 +1,11 @@
 module.exports = {
-  async afterCreate(event) {  
+  async afterCreate(event) {
       const { result } = event;
 
       try{
           await strapi.plugins['email'].services.email.send({
-            to: 'abuenoc18_2@unc.edu.pe',
-            from: 'abuenoc18_2@unc.edu.pe',
+            to: 'pruebamdpemails@gmail.com',
+            from: 'pruebamdpemails@gmail.com',
             subject: 'New Message ContactUs',
             text: "Contáctanos",
             html:

@@ -28,8 +28,8 @@ module.exports = ({ env }) => ({
         apiKey: env('SENDGRID_API_KEY'),
       },
       settings: {
-        defaultFrom: 'abuenoc18_2@unc.edu.pe',
-        defaultReplyTo: 'abuenoc18_2@unc.edu.pe',
+        defaultFrom: 'pruebamdpemails@gmail.com',
+        defaultReplyTo: 'pruebamdpemails@gmail.com',
       },
     },
   },
