@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   async afterCreate(event) {
       const { result } = event;
 
@@ -104,8 +104,11 @@ module.exports = {
 `
             ,
           })
+
+          await strapi.service("api::contact-us-form.sms").sendSms(result);
       } catch(err) {
           console.log(err);
       }
   }
 }
+*/
