@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_component_list_children",
+  "info": {
+    "singularName": "blog-component-list-child",
+    "pluralName": "blog-component-list-children",
+    "displayName": "BlogComponentListChild"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BlogName": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "string"
+    },
+    "blog_component_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog-component-list.blog-component-list",
+      "inversedBy": "blog_component_list_children"
+    }
+  }
+}
