@@ -16,6 +16,12 @@
     },
     "UrlImage": {
       "type": "string"
+    },
+    "blog": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog.blog",
+      "inversedBy": "blog_component_list_images"
     }
   }
 }

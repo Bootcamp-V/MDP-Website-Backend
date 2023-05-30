@@ -56,6 +56,12 @@
     },
     "preview": {
       "type": "text"
+    },
+    "blog_component_list_images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-list-image.blog-component-list-image",
+      "mappedBy": "blog"
     }
   }
 }
