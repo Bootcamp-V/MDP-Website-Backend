@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-05-30T21:13:24.353Z"
+    "x-generation-date": "2023-05-31T13:38:43.145Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6212,6 +6212,20 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "blog_comments": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
               }
             }
           }
@@ -7072,6 +7086,147 @@
                                         }
                                       }
                                     },
+                                    "blog_comments": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "mensaje": {
+                                                    "type": "string"
+                                                  },
+                                                  "date": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "email": {
+                                                    "type": "string",
+                                                    "format": "email"
+                                                  },
+                                                  "name": {
+                                                    "type": "string"
+                                                  },
+                                                  "favoritesCount": {
+                                                    "type": "integer"
+                                                  },
+                                                  "published": {
+                                                    "type": "boolean"
+                                                  },
+                                                  "blog_comment": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "responses": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "id": {
+                                                              "type": "number"
+                                                            },
+                                                            "attributes": {
+                                                              "type": "object",
+                                                              "properties": {}
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "blog": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "createdAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "updatedAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "publishedAt": {
+                                                    "type": "string",
+                                                    "format": "date-time"
+                                                  },
+                                                  "createdBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "updatedBy": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "data": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -7260,6 +7415,26 @@
               }
             }
           },
+          "blog_comments": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -7324,6 +7499,1281 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/BlogResponseDataObject"
+          },
+          "meta": {
+            "type": "object"
+          }
+        }
+      },
+      "BlogCommentRequest": {
+        "type": "object",
+        "required": [
+          "data"
+        ],
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "mensaje": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "name": {
+                "type": "string"
+              },
+              "favoritesCount": {
+                "type": "integer"
+              },
+              "published": {
+                "type": "boolean"
+              },
+              "blog_comment": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
+              "responses": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "example": "string or id"
+                }
+              },
+              "blog": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              }
+            }
+          }
+        }
+      },
+      "BlogCommentListResponseDataItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/BlogComment"
+          }
+        }
+      },
+      "BlogCommentListResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlogCommentListResponseDataItem"
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "pagination": {
+                "type": "object",
+                "properties": {
+                  "page": {
+                    "type": "integer"
+                  },
+                  "pageSize": {
+                    "type": "integer",
+                    "minimum": 25
+                  },
+                  "pageCount": {
+                    "type": "integer",
+                    "maximum": 1
+                  },
+                  "total": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "BlogComment": {
+        "type": "object",
+        "properties": {
+          "mensaje": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "name": {
+            "type": "string"
+          },
+          "favoritesCount": {
+            "type": "integer"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "blog_comment": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {
+                      "mensaje": {
+                        "type": "string"
+                      },
+                      "date": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "favoritesCount": {
+                        "type": "integer"
+                      },
+                      "published": {
+                        "type": "boolean"
+                      },
+                      "blog_comment": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "responses": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "blog": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "Title": {
+                                    "type": "string"
+                                  },
+                                  "UrlImage": {
+                                    "type": "string"
+                                  },
+                                  "SubTitle": {
+                                    "type": "string"
+                                  },
+                                  "Category": {
+                                    "type": "string"
+                                  },
+                                  "Date": {
+                                    "type": "string",
+                                    "format": "date"
+                                  },
+                                  "Likes": {
+                                    "type": "integer"
+                                  },
+                                  "blog_component_descriptions": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "SubTitle": {
+                                                  "type": "string"
+                                                },
+                                                "Description": {
+                                                  "type": "string"
+                                                },
+                                                "BlogName": {
+                                                  "type": "string"
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {
+                                                            "firstname": {
+                                                              "type": "string"
+                                                            },
+                                                            "lastname": {
+                                                              "type": "string"
+                                                            },
+                                                            "username": {
+                                                              "type": "string"
+                                                            },
+                                                            "email": {
+                                                              "type": "string",
+                                                              "format": "email"
+                                                            },
+                                                            "resetPasswordToken": {
+                                                              "type": "string"
+                                                            },
+                                                            "registrationToken": {
+                                                              "type": "string"
+                                                            },
+                                                            "isActive": {
+                                                              "type": "boolean"
+                                                            },
+                                                            "roles": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "data": {
+                                                                  "type": "array",
+                                                                  "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "name": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "code": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "description": {
+                                                                            "type": "string"
+                                                                          },
+                                                                          "users": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "array",
+                                                                                "items": {
+                                                                                  "type": "object",
+                                                                                  "properties": {
+                                                                                    "id": {
+                                                                                      "type": "number"
+                                                                                    },
+                                                                                    "attributes": {
+                                                                                      "type": "object",
+                                                                                      "properties": {}
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "permissions": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "array",
+                                                                                "items": {
+                                                                                  "type": "object",
+                                                                                  "properties": {
+                                                                                    "id": {
+                                                                                      "type": "number"
+                                                                                    },
+                                                                                    "attributes": {
+                                                                                      "type": "object",
+                                                                                      "properties": {
+                                                                                        "action": {
+                                                                                          "type": "string"
+                                                                                        },
+                                                                                        "subject": {
+                                                                                          "type": "string"
+                                                                                        },
+                                                                                        "properties": {},
+                                                                                        "conditions": {},
+                                                                                        "role": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "number"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "createdAt": {
+                                                                                          "type": "string",
+                                                                                          "format": "date-time"
+                                                                                        },
+                                                                                        "updatedAt": {
+                                                                                          "type": "string",
+                                                                                          "format": "date-time"
+                                                                                        },
+                                                                                        "createdBy": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "number"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        },
+                                                                                        "updatedBy": {
+                                                                                          "type": "object",
+                                                                                          "properties": {
+                                                                                            "data": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "id": {
+                                                                                                  "type": "number"
+                                                                                                },
+                                                                                                "attributes": {
+                                                                                                  "type": "object",
+                                                                                                  "properties": {}
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "createdAt": {
+                                                                            "type": "string",
+                                                                            "format": "date-time"
+                                                                          },
+                                                                          "updatedAt": {
+                                                                            "type": "string",
+                                                                            "format": "date-time"
+                                                                          },
+                                                                          "createdBy": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "number"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "updatedBy": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "data": {
+                                                                                "type": "object",
+                                                                                "properties": {
+                                                                                  "id": {
+                                                                                    "type": "number"
+                                                                                  },
+                                                                                  "attributes": {
+                                                                                    "type": "object",
+                                                                                    "properties": {}
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "blocked": {
+                                                              "type": "boolean"
+                                                            },
+                                                            "preferedLanguage": {
+                                                              "type": "string"
+                                                            },
+                                                            "createdAt": {
+                                                              "type": "string",
+                                                              "format": "date-time"
+                                                            },
+                                                            "updatedAt": {
+                                                              "type": "string",
+                                                              "format": "date-time"
+                                                            },
+                                                            "createdBy": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "data": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "number"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "updatedBy": {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "data": {
+                                                                  "type": "object",
+                                                                  "properties": {
+                                                                    "id": {
+                                                                      "type": "number"
+                                                                    },
+                                                                    "attributes": {
+                                                                      "type": "object",
+                                                                      "properties": {}
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "blog_component_definitions": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "BlogName": {
+                                                  "type": "string"
+                                                },
+                                                "Title": {
+                                                  "type": "string"
+                                                },
+                                                "Definition": {
+                                                  "type": "string"
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "blog_component_images": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "BlogName": {
+                                                  "type": "string"
+                                                },
+                                                "UrlImage": {
+                                                  "type": "string"
+                                                },
+                                                "SubTitle": {
+                                                  "type": "string"
+                                                },
+                                                "Description": {
+                                                  "type": "string"
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "blog_component_lists": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "BlogName": {
+                                                  "type": "string"
+                                                },
+                                                "Description": {
+                                                  "type": "string"
+                                                },
+                                                "blog_component_list_children": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "array",
+                                                      "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "BlogName": {
+                                                                "type": "string"
+                                                              },
+                                                              "Item": {
+                                                                "type": "string"
+                                                              },
+                                                              "blog_component_list": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "createdAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "updatedAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "publishedAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "createdBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "updatedBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "preview": {
+                                    "type": "string"
+                                  },
+                                  "blog_component_list_images": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "BlogName": {
+                                                  "type": "string"
+                                                },
+                                                "UrlImage": {
+                                                  "type": "string"
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "blog_comments": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "updatedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "publishedAt": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                  },
+                                  "createdBy": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "attributes": {
+                                            "type": "object",
+                                            "properties": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "updatedBy": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "object",
+                                        "properties": {
+                                          "id": {
+                                            "type": "number"
+                                          },
+                                          "attributes": {
+                                            "type": "object",
+                                            "properties": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "publishedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "updatedBy": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "blog": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          },
+          "updatedBy": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "attributes": {
+                    "type": "object",
+                    "properties": {}
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "BlogCommentResponseDataObject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "attributes": {
+            "$ref": "#/components/schemas/BlogComment"
+          }
+        }
+      },
+      "BlogCommentResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/BlogCommentResponseDataObject"
           },
           "meta": {
             "type": "object"
@@ -8187,6 +9637,147 @@
                                     },
                                     "UrlImage": {
                                       "type": "string"
+                                    },
+                                    "blog": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "blog_comments": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mensaje": {
+                                      "type": "string"
+                                    },
+                                    "date": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "email": {
+                                      "type": "string",
+                                      "format": "email"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "favoritesCount": {
+                                      "type": "integer"
+                                    },
+                                    "published": {
+                                      "type": "boolean"
+                                    },
+                                    "blog_comment": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "responses": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     },
                                     "blog": {
                                       "type": "object",
@@ -9237,6 +10828,147 @@
                                     },
                                     "UrlImage": {
                                       "type": "string"
+                                    },
+                                    "blog": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "blog_comments": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mensaje": {
+                                      "type": "string"
+                                    },
+                                    "date": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "email": {
+                                      "type": "string",
+                                      "format": "email"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "favoritesCount": {
+                                      "type": "integer"
+                                    },
+                                    "published": {
+                                      "type": "boolean"
+                                    },
+                                    "blog_comment": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "responses": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     },
                                     "blog": {
                                       "type": "object",
@@ -10364,6 +12096,147 @@
                           }
                         }
                       },
+                      "blog_comments": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mensaje": {
+                                      "type": "string"
+                                    },
+                                    "date": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "email": {
+                                      "type": "string",
+                                      "format": "email"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "favoritesCount": {
+                                      "type": "integer"
+                                    },
+                                    "published": {
+                                      "type": "boolean"
+                                    },
+                                    "blog_comment": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "responses": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "blog": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -11249,6 +13122,147 @@
                                                               },
                                                               "UrlImage": {
                                                                 "type": "string"
+                                                              },
+                                                              "blog": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "createdAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "updatedAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "publishedAt": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "createdBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "updatedBy": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "blog_comments": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "array",
+                                                      "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                              "mensaje": {
+                                                                "type": "string"
+                                                              },
+                                                              "date": {
+                                                                "type": "string",
+                                                                "format": "date-time"
+                                                              },
+                                                              "email": {
+                                                                "type": "string",
+                                                                "format": "email"
+                                                              },
+                                                              "name": {
+                                                                "type": "string"
+                                                              },
+                                                              "favoritesCount": {
+                                                                "type": "integer"
+                                                              },
+                                                              "published": {
+                                                                "type": "boolean"
+                                                              },
+                                                              "blog_comment": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                      "id": {
+                                                                        "type": "number"
+                                                                      },
+                                                                      "attributes": {
+                                                                        "type": "object",
+                                                                        "properties": {}
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "responses": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "data": {
+                                                                    "type": "array",
+                                                                    "items": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "id": {
+                                                                          "type": "number"
+                                                                        },
+                                                                        "attributes": {
+                                                                          "type": "object",
+                                                                          "properties": {}
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
                                                               },
                                                               "blog": {
                                                                 "type": "object",
@@ -12434,6 +14448,147 @@
                                       }
                                     }
                                   },
+                                  "blog_comments": {
+                                    "type": "object",
+                                    "properties": {
+                                      "data": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {
+                                                "mensaje": {
+                                                  "type": "string"
+                                                },
+                                                "date": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "email": {
+                                                  "type": "string",
+                                                  "format": "email"
+                                                },
+                                                "name": {
+                                                  "type": "string"
+                                                },
+                                                "favoritesCount": {
+                                                  "type": "integer"
+                                                },
+                                                "published": {
+                                                  "type": "boolean"
+                                                },
+                                                "blog_comment": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "responses": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "array",
+                                                      "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                          "id": {
+                                                            "type": "number"
+                                                          },
+                                                          "attributes": {
+                                                            "type": "object",
+                                                            "properties": {}
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "blog": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "createdAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "updatedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "publishedAt": {
+                                                  "type": "string",
+                                                  "format": "date-time"
+                                                },
+                                                "createdBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "updatedBy": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "data": {
+                                                      "type": "object",
+                                                      "properties": {
+                                                        "id": {
+                                                          "type": "number"
+                                                        },
+                                                        "attributes": {
+                                                          "type": "object",
+                                                          "properties": {}
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -13459,6 +15614,147 @@
                                     },
                                     "UrlImage": {
                                       "type": "string"
+                                    },
+                                    "blog": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "createdAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "updatedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "publishedAt": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "createdBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "updatedBy": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "blog_comments": {
+                        "type": "object",
+                        "properties": {
+                          "data": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "attributes": {
+                                  "type": "object",
+                                  "properties": {
+                                    "mensaje": {
+                                      "type": "string"
+                                    },
+                                    "date": {
+                                      "type": "string",
+                                      "format": "date-time"
+                                    },
+                                    "email": {
+                                      "type": "string",
+                                      "format": "email"
+                                    },
+                                    "name": {
+                                      "type": "string"
+                                    },
+                                    "favoritesCount": {
+                                      "type": "integer"
+                                    },
+                                    "published": {
+                                      "type": "boolean"
+                                    },
+                                    "blog_comment": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "attributes": {
+                                              "type": "object",
+                                              "properties": {}
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "responses": {
+                                      "type": "object",
+                                      "properties": {
+                                        "data": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "attributes": {
+                                                "type": "object",
+                                                "properties": {}
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     },
                                     "blog": {
                                       "type": "object",
@@ -54644,6 +56940,511 @@
           }
         ],
         "operationId": "delete/blogs/{id}"
+      }
+    },
+    "/blog-comments": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogCommentListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog-comment"
+        ],
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort by attributes ascending (asc) or descending (desc)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagination[withCount]",
+            "in": "query",
+            "description": "Return page/pageSize (default: true)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "pagination[page]",
+            "in": "query",
+            "description": "Page number (default: 0)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pagination[pageSize]",
+            "in": "query",
+            "description": "Page size (default: 25)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pagination[start]",
+            "in": "query",
+            "description": "Offset value (default: 0)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "pagination[limit]",
+            "in": "query",
+            "description": "Number of entities to return (default: 25)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "description": "Fields to return (ex: title,author)",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "populate",
+            "in": "query",
+            "description": "Relations to return",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filters",
+            "in": "query",
+            "description": "Filters to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "object"
+            },
+            "style": "deepObject"
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "description": "Locale to apply",
+            "deprecated": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "operationId": "get/blog-comments"
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogCommentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog-comment"
+        ],
+        "parameters": [],
+        "operationId": "post/blog-comments",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlogCommentRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/blog-comments/{id}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogCommentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog-comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "get/blog-comments/{id}"
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BlogCommentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog-comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "put/blog-comments/{id}",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlogCommentRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog-comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "operationId": "delete/blog-comments/{id}"
       }
     },
     "/blog-component-definitions": {

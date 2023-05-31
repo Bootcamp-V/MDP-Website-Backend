@@ -62,6 +62,12 @@
       "relation": "oneToMany",
       "target": "api::blog-component-list-image.blog-component-list-image",
       "mappedBy": "blog"
+    },
+    "blog_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-comment.blog-comment",
+      "mappedBy": "blog"
     }
   }
 }
