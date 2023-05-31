@@ -17,3 +17,21 @@ module.exports = ({ env }) => ({
   },
   // ...
 });
+
+
+module.exports = ({ env }) => ({
+  // ...
+  email: {
+    config: {
+      provider: 'sendgrid',
+      providerOptions: {
+        apiKey: env('SENDGRID_API_KEY'),
+      },
+      settings: {
+        defaultFrom: 'clouddesk@mdp.com.pe',
+        defaultReplyTo: 'clouddesk@mdp.com.pe',
+      },
+    },
+  },
+  // ...
+});

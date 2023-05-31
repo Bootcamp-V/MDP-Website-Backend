@@ -4,16 +4,14 @@
   "info": {
     "singularName": "post-about",
     "pluralName": "post-abouts",
-    "displayName": "PostAbout"
+    "displayName": "PostAbout",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "date": {
-      "type": "string"
-    },
     "tittle": {
       "type": "string"
     },
@@ -21,14 +19,18 @@
       "type": "text"
     },
     "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

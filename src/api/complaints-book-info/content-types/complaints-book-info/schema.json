@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "complaints_book_infos",
+  "info": {
+    "singularName": "complaints-book-info",
+    "pluralName": "complaints-book-infos",
+    "displayName": "ComplaintsBookInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "date"
+    },
+    "persona": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "mensaje": {
+      "type": "text"
+    },
+    "numerodoc": {
+      "type": "biginteger"
+    },
+    "tiposol": {
+      "type": "string"
+    },
+    "tipodoc": {
+      "type": "string"
+    },
+    "numerodocpersona": {
+      "type": "biginteger"
+    },
+    "tipodocpersona": {
+      "type": "string"
+    }
+  }
+}

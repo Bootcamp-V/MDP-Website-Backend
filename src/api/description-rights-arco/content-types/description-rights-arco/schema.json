@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "description_rights_arcos",
+  "info": {
+    "singularName": "description-rights-arco",
+    "pluralName": "description-rights-arcos",
+    "displayName": "DescriptionRightsArco",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    },
+    "title_rights_arco": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::title-rights-arco.title-rights-arco",
+      "inversedBy": "description_rights_arcos"
+    }
+  }
+}
