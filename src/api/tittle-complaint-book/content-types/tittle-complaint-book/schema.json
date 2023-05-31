@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tittle_complaint_books",
+  "info": {
+    "singularName": "tittle-complaint-book",
+    "pluralName": "tittle-complaint-books",
+    "displayName": "TittleComplaintBook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "description_complaint_books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::description-complaint-book.description-complaint-book",
+      "mappedBy": "tittle_complaint_book"
+    }
+  }
+}
