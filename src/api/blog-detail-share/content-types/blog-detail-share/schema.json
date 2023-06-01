@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_detail_shares",
+  "info": {
+    "singularName": "blog-detail-share",
+    "pluralName": "blog-detail-shares",
+    "displayName": "BlogDetailShare",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page": {
+      "type": "string"
+    },
+    "SocialNetworkName": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "Url": {
+      "type": "string"
+    }
+  }
+}
