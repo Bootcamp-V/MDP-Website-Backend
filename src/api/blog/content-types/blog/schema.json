@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "UrlImage": {
+      "type": "string"
+    },
+    "SubTitle": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "Likes": {
+      "type": "integer"
+    },
+    "blog_component_descriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-description.blog-component-description",
+      "mappedBy": "blog"
+    },
+    "blog_component_definitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-definition.blog-component-definition",
+      "mappedBy": "blog"
+    },
+    "blog_component_images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-image.blog-component-image",
+      "mappedBy": "blog"
+    },
+    "blog_component_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-list.blog-component-list",
+      "mappedBy": "blog"
+    },
+    "preview": {
+      "type": "text"
+    },
+    "blog_component_list_images": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-component-list-image.blog-component-list-image",
+      "mappedBy": "blog"
+    },
+    "blog_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-comment.blog-comment",
+      "mappedBy": "blog"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_component_definitions",
+  "info": {
+    "singularName": "blog-component-definition",
+    "pluralName": "blog-component-definitions",
+    "displayName": "BlogComponentDefinition "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BlogName": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Definition": {
+      "type": "string"
+    },
+    "blog": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog.blog",
+      "inversedBy": "blog_component_definitions"
+    }
+  }
+}
